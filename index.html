@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>naufal@portfolio — file explorer</title>
+<meta name="description" content="Portofolio Naufal A. Furqan, Hardware Engineer & Embedded Systems — ditampilkan sebagai file explorer.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="app">
+
+  <div class="topbar">
+    <div class="traffic"><i></i><i></i><i></i></div>
+    <div class="topbar-title">
+      <span>Explorer</span><span class="sep">/</span><span class="long">home/naufal/portfolio</span>
+    </div>
+    <button class="menu-btn" id="menuBtn" aria-label="Buka menu" aria-expanded="false">≡ files</button>
+  </div>
+
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-label">Explorer</div>
+    <ul class="tree">
+      <li>
+        <details class="folder" open>
+          <summary><span class="caret"></span><span class="ico">▸</span>naufal/</summary>
+          <ul>
+            <li><a class="file-link" data-target="profile" href="#profile"><span class="ico">◆</span>profile.md</a></li>
+
+            <li>
+              <details class="folder" open>
+                <summary><span class="caret"></span><span class="ico">▸</span>experience/</summary>
+                <ul>
+                  <li><a class="file-link" data-target="experience" href="#experience"><span class="ico">◆</span>work_history.json</a></li>
+                </ul>
+              </details>
+            </li>
+
+            <li>
+              <details class="folder" open>
+                <summary><span class="caret"></span><span class="ico">▸</span>projects/</summary>
+                <ul>
+                  <li><a class="file-link" data-target="projects" href="#projects"><span class="ico">◆</span>directory_listing</a></li>
+                </ul>
+              </details>
+            </li>
+
+            <li><a class="file-link" data-target="skills" href="#skills"><span class="ico">◆</span>skills.yaml</a></li>
+            <li><a class="file-link" data-target="education" href="#education"><span class="ico">◆</span>education.txt</a></li>
+            <li><a class="file-link" data-target="contact" href="#contact"><span class="ico">◆</span>contact.sh</a></li>
+          </ul>
+        </details>
+      </li>
+    </ul>
+  </aside>
+
+  <div class="overlay" id="overlay"></div>
+
+  <div class="main-pane">
+    <div class="tabbar" id="tabbar">
+      <div class="tab active" data-tab="profile"><span class="ico">◆</span>profile.md</div>
+      <div class="tab" data-tab="experience"><span class="ico">◆</span>work_history.json</div>
+      <div class="tab" data-tab="projects"><span class="ico">◆</span>directory_listing</div>
+      <div class="tab" data-tab="skills"><span class="ico">◆</span>skills.yaml</div>
+      <div class="tab" data-tab="education"><span class="ico">◆</span>education.txt</div>
+      <div class="tab" data-tab="contact"><span class="ico">◆</span>contact.sh</div>
+    </div>
+
+    <div class="content" id="content">
+
+      <section class="pane-section" id="profile">
+        <div class="filepath">naufal <span class="sep">/</span> <span class="cur">profile.md</span></div>
+
+        <div class="profile-block reveal">
+          <div class="photo-frame">
+            <img src="profile.jpg" alt="Foto Naufal A. Furqan">
+            <div class="photo-meta"><span>profile.jpg</span><span>928×1392</span></div>
+          </div>
+          <div class="profile-text">
+            <div class="eyebrow">Ampenan Selatan, Lombok — ID</div>
+            <h1 class="name">Naufal A. Furqan<br><span class="accent">Hardware & Embedded Systems Engineer</span></h1>
+            <div class="role-line">
+              <span class="tag">IoT</span>
+              <span class="tag">PCB Design</span>
+              <span class="tag">Circuit Schematic</span>
+              <span class="tag">Full Stack</span>
+            </div>
+            <div class="comment">// ringkasan</div>
+            <p class="lede">Lulusan Teknologi Informasi yang merancang sistem elektronik dan prototipe IoT dari skematik hingga produksi — mulai dari stasiun cuaca pesisir dan smart buoy, hingga sistem digital untuk kebutuhan sekolah.</p>
+            <div class="meta-list">
+              <div><span class="k">tel</span>+62 812 3944 9914</div>
+              <div><span class="k">mail</span><a href="mailto:naufal.furqan13@gmail.com">naufal.furqan13@gmail.com</a></div>
+              <div><span class="k">in</span><a href="https://linkedin.com/in/naufal-a-furqan" target="_blank" rel="noopener">naufal-a-furqan</a></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="pane-section" id="experience">
+        <div class="filepath">naufal <span class="sep">/</span> experience <span class="sep">/</span> <span class="cur">work_history.json</span></div>
+        <h2 class="h-title reveal">Pengalaman Kerja</h2>
+        <div class="h-sub reveal">2 entri · terurut dari terbaru</div>
+
+        <div class="exp-item reveal">
+          <div class="exp-top">
+            <div class="exp-role">Full Stack Developer</div>
+            <div class="exp-date">Agustus 2025 — Sekarang</div>
+          </div>
+          <div class="exp-org">Sekolah Pesisi Juang · Ampenan</div>
+          <ul class="exp-list">
+            <li>Mengembangkan dan mengelola website sekolah beserta database-nya.</li>
+            <li>Mengelola data siswa dan guru dalam sistem digital.</li>
+            <li>Membangun sistem pendukung kegiatan sekolah dan volunteering.</li>
+            <li>Menyusun proposal dan dokumentasi kegiatan.</li>
+            <li>Mengintegrasikan kebutuhan administrasi ke dalam sistem digital.</li>
+          </ul>
+        </div>
+
+        <div class="exp-item reveal">
+          <div class="exp-top">
+            <div class="exp-role">Hardware Engineer</div>
+            <div class="exp-date">2023 — 2025</div>
+          </div>
+          <div class="exp-org">Ecotreng Nature Indonesia · Mataram</div>
+          <ul class="exp-list">
+            <li>Merancang skematik elektronik untuk pengembangan produk.</li>
+            <li>Melakukan simulasi dan pengujian jalur desain elektronik.</li>
+            <li>Troubleshooting permasalahan desain hardware.</li>
+            <li>Merancang enclosure menggunakan teknologi 3D printing.</li>
+            <li>Mengoptimasi ukuran PCB, menekan biaya produksi.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="pane-section" id="projects">
+        <div class="filepath">naufal <span class="sep">/</span> <span class="cur">projects/</span></div>
+        <h2 class="h-title reveal">Proyek & Riset</h2>
+        <div class="h-sub reveal" id="projects-count">6 items</div>
+
+        <table class="dir-table reveal">
+          <thead>
+            <tr><th>Nama</th><th>Deskripsi</th><th>Tahun</th></tr>
+          </thead>
+          <tbody id="projects-tbody">
+          </tbody>
+        </table>
+      </section>
+
+      <section class="pane-section" id="skills">
+        <div class="filepath">naufal <span class="sep">/</span> <span class="cur">skills.yaml</span></div>
+        <h2 class="h-title reveal">Keahlian</h2>
+        <div class="h-sub reveal">3 kategori</div>
+
+        <div class="yaml reveal">
+          <div class="grp">
+            <span class="k">hardware_embedded:</span><br>
+            <span class="dash">-</span> <span class="v">Microcontroller</span><br>
+            <span class="dash">-</span> <span class="v">Sensor Integration</span><br>
+            <span class="dash">-</span> <span class="v">Circuit Design</span><br>
+            <span class="dash">-</span> <span class="v">Electronic Schematic</span><br>
+            <span class="dash">-</span> <span class="v">PCB Design</span><br>
+            <span class="dash">-</span> <span class="v">Embedded System</span><br>
+            <span class="dash">-</span> <span class="v">IoT Communication</span>
+          </div>
+          <div class="grp">
+            <span class="k">software_data:</span><br>
+            <span class="dash">-</span> <span class="v">C / C++</span><br>
+            <span class="dash">-</span> <span class="v">JavaScript</span><br>
+            <span class="dash">-</span> <span class="v">MySQL</span><br>
+            <span class="dash">-</span> <span class="v">Database Management</span><br>
+            <span class="dash">-</span> <span class="v">Git</span><br>
+            <span class="dash">-</span> <span class="v">Google Colab</span>
+          </div>
+          <div class="grp">
+            <span class="k">tools:</span><br>
+            <span class="dash">-</span> <span class="v">KiCad</span><br>
+            <span class="dash">-</span> <span class="v">Fritzing</span><br>
+            <span class="dash">-</span> <span class="v">Arduino IDE</span><br>
+            <span class="dash">-</span> <span class="v">VS Code</span><br>
+            <span class="dash">-</span> <span class="v">Arch Linux</span><br>
+            <span class="dash">-</span> <span class="v">Google Workspace</span><br>
+            <span class="dash">-</span> <span class="v">Microsoft Office</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="pane-section" id="education">
+        <div class="filepath">naufal <span class="sep">/</span> <span class="cur">education.txt</span></div>
+        <h2 class="h-title reveal">Pendidikan</h2>
+        <div class="h-sub reveal">1 entri</div>
+
+        <div class="edu-card reveal">
+          <div>
+            <div class="edu-degree">S1 Teknologi Informasi</div>
+            <div class="edu-school">Universitas Bumigora</div>
+          </div>
+          <div class="edu-right">
+            <div>2022 — 2026</div>
+            <div class="gpa">IPK 3,56</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="pane-section" id="contact">
+        <div class="filepath">naufal <span class="sep">/</span> <span class="cur">contact.sh</span></div>
+        <h2 class="h-title reveal">Kontak</h2>
+        <div class="h-sub reveal">executable</div>
+
+        <div class="terminal reveal">
+          <div><span class="prompt">naufal@portfolio</span><span class="cmd">:~$ ./contact.sh</span></div>
+          <div class="out">mengirim pesan ke Naufal...</div>
+          <div>→ email: <a href="mailto:naufal.furqan13@gmail.com">naufal.furqan13@gmail.com</a></div>
+          <div>→ telp: <a href="tel:+6281239449914">+62 812 3944 9914</a></div>
+          <div>→ linkedin: <a href="https://linkedin.com/in/naufal-a-furqan" target="_blank" rel="noopener">linkedin.com/in/naufal-a-furqan</a></div>
+          <div class="out">© 2026 Naufal A. Furqan — Ampenan Selatan, Lombok, Indonesia</div>
+        </div>
+      </section>
+
+    </div>
+
+    <div class="statusbar">
+      <span>⎇ main <span id="statusFile">profile.md</span></span>
+      <span>UTF-8 · Lombok, ID</span>
+    </div>
+  </div>
+
+</div>
+
+<script src="data.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
